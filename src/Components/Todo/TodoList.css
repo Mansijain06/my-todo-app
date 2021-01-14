@@ -1,0 +1,62 @@
+@import url("https://fonts.googleapis.com/css2?family=Dancing+Script:wght@700&family=Lobster&display=swap");
+
+body {
+  background: linear-gradient(to bottom right, #221642, #00e3ae);
+  background-repeat: no-repeat;
+  height: 100vh;
+}
+
+.user {
+  font-size: 1.5rem;
+  margin: 1rem;
+  display: flex;
+  justify-content: space-between;
+}
+
+.user-name {
+  color: #fff;
+  font-family: sans-serif;
+}
+
+.user button {
+  background-color: #051029;
+  border: none;
+  border-radius: 0.5rem;
+  padding: 0.5rem;
+  font-size: 1.2rem;
+  color: #fff;
+  cursor: pointer;
+}
+
+/* .todo-container {
+  /* text-align: center; */
+/* }  */
+
+.new {
+  display: flex;
+  justify-content: center;
+}
+.new textarea {
+  width: 50%;
+  height: 3rem;
+  color: #fff;
+  border-radius: 0.5rem;
+  background: transparent;
+  border: none;
+  font-size: 1.5rem;
+  box-shadow: 0px 4px 4px 0px rgba(23, 232, 255, 0.2);
+  outline: none;
+}
+
+.todo-container button {
+  margin: 1rem;
+  height: 2.5rem;
+  width: 5rem;
+  font-size: 1rem;
+  border-radius: 0.5rem;
+  /* background-color: #207d97; */
+  background-color: #051029;
+  border: none;
+  outline: none;
+  color: #fff;
+}
