@@ -8,7 +8,7 @@ export default function TodoList(props) {
 
   const addItem = () => {
     // send data to backend
-    fetch("http://localhost:9999/todo", {
+    fetch("https://todo-app06-backend.herokuapp.com/todo", {
       method: "POST",
       body: JSON.stringify({ task: newItem }),
       headers: {
@@ -31,7 +31,7 @@ export default function TodoList(props) {
 
   const deleteHandler = (itemIdx) => {
     const idToDelete = items[itemIdx]._id;
-    fetch(`http://localhost:9999/todo/${idToDelete}`, {
+    fetch(`https://todo-app06-backend.herokuapp.com/todo/${idToDelete}`, {
       method: "DELETE",
       credentials: "include",
     }).then((r) => {
@@ -43,7 +43,7 @@ export default function TodoList(props) {
 
   const editHandler = (editedValue, itemIdx) => {
     const idToEdit = items[itemIdx]._id;
-    fetch(`http://localhost:9999/todo/${idToEdit}`, {
+    fetch(`https://todo-app06-backend.herokuapp.com/todo/${idToEdit}`, {
       method: "PUT",
       body: JSON.stringify({ task: editedValue }),
       headers: {
@@ -60,7 +60,9 @@ export default function TodoList(props) {
   };
 
   useEffect(() => {
-    fetch("http://localhost:9999/todo", { credentials: "include" })
+    fetch("https://todo-app06-backend.herokuapp.com/todo", {
+      credentials: "include",
+    })
       .then((r) => r.json())
       .then((arr) => {
         const sortedArr = arr.sort((a, b) => {
